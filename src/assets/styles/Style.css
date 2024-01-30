@@ -165,6 +165,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .works__title {
@@ -309,7 +310,8 @@ height: 260px;
 
 .footer__items {
     display: flex;
-    justify-content: space-around;
+    gap: 260px;
+    justify-content: center;
 }
 
 .footer__items_left  img {

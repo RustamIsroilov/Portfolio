@@ -23,6 +23,7 @@
                             <img src="@/assets/img/github.svg" alt="">
                             <a href="">View Code</a>
                         </div>
+                        
 
                     </div>
 
@@ -146,6 +147,14 @@ import Footer from '@/components/Footer.vue';
 </script>
 
 <style lang="scss" scoped>
+.works{
+align-items: center;
+
+    &_cards{
+        display: flex;
+        justify-content: center;
+    }
+}
 .project__card {
     display: flex;
     gap: 120px;

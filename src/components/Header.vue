@@ -6,7 +6,7 @@
             I build things for the web —
             and I use <span>Claude&nbsp;AI</span> to vibe-code
             full projects, end&nbsp;to&nbsp;end.</h1>
-        <img src="@/assets/img/header_card.png" alt="" class="about__img">
+        <img src="@/assets/img/header_card.png" alt="Rustam Isroilov" class="about__img">
     </div>
 </template>
 

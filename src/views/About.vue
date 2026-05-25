@@ -4,7 +4,7 @@
             <span>Junior </span>
             web developer studying in the <span>Vue</span> ecosystem
             and shipping projects with <span>Claude AI</span>.</h1>
-        <img src="@/assets/img/me2.png" alt="" class="about__img">
+        <img src="@/assets/img/me2.png" alt="Rustam Isroilov" class="about__img">
     </div>
     <div class="aboutp">
         <h2 class="aboutp__title">About Me</h2>

@@ -23,9 +23,40 @@ export const defaultAchievements = {
         status: 'In progress',
         note: 'Currently preparing — score coming soon',
     },
+    /**
+     * milestones[] — each item:
+     *   title    string   — heading
+     *   org      string   — institution + location
+     *   when     string   — date range
+     *   desc     string   — short description
+     *   badges?  string[] — optional accolades, rendered as highlighted chips
+     */
     milestones: [
         {
-            title: 'Proweb Learning Center — Graduated',
+            title: 'Public School #178',
+            org:   'Tashkent, Uzbekistan',
+            when:  'September 2016 – May 2019',
+            desc:  'Primary and lower-secondary education.',
+        },
+        {
+            title: 'Wisdom Private School',
+            org:   'Tashkent, Uzbekistan',
+            when:  'September 2019 – March 2020',
+            desc:  'Continued secondary education.',
+        },
+        {
+            title: "Iste'dodli Kelajak Yoshlari — Private School",
+            org:   'Tashkent, Uzbekistan',
+            when:  'March 2020 – May 2026',
+            desc:  'Full secondary education through graduation.',
+            badges: [
+                '🏆 Best Student of the Year 2023–2024',
+                '🏆 Best Student of the Year 2024–2025',
+                '🏆 Best Student of the Year 2025–2026',
+            ],
+        },
+        {
+            title: 'Proweb Learning Center — Web Development',
             org:   'Tashkent, Uzbekistan',
             when:  '16.03.2023 – 16.01.2024',
             desc:  'Modern Web Professions course: HTML, CSS, JavaScript, SCSS, Vue, Git.',

@@ -37,12 +37,16 @@
         <h2 class="ach__section">Study &amp; Milestones</h2>
         <div class="ach__timeline">
             <article class="tl__item" v-for="m in achievements.milestones" :key="m.title">
-                <div class="tl__dot"></div>
-                <div class="tl__body">
+                <div class="tl__dot" :class="{ 'tl__dot--star': m.badges && m.badges.length }"></div>
+                <div class="tl__body" :class="{ 'tl__body--highlight': m.badges && m.badges.length }">
                     <h3 class="tl__title">{{ m.title }}</h3>
                     <p class="tl__org">{{ m.org }}</p>
                     <p class="tl__when">{{ m.when }}</p>
                     <p class="tl__desc">{{ m.desc }}</p>
+
+                    <ul v-if="m.badges && m.badges.length" class="tl__badges">
+                        <li v-for="b in m.badges" :key="b">{{ b }}</li>
+                    </ul>
                 </div>
             </article>
         </div>
@@ -161,6 +165,32 @@ const { data: achievements } = useAchievements();
     box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 6px var(--brand-from);
 }
 .tl__body { background: var(--bg-1); border-radius: 12px; padding: 16px 20px; }
+.tl__body--highlight {
+    background: linear-gradient(135deg, var(--bg-1), #1e293b 60%, rgba(56, 189, 248, 0.10));
+    border: 1px solid rgba(252, 211, 77, 0.35);
+    box-shadow: 0 6px 20px rgba(252, 211, 77, 0.06);
+}
+.tl__dot--star {
+    background: var(--warn-fg);
+    box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 6px var(--warn-fg);
+}
+.tl__badges {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tl__badges li {
+    background: rgba(252, 211, 77, 0.12);
+    color: var(--warn-fg);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid rgba(252, 211, 77, 0.25);
+}
 .tl__title { margin: 0 0 4px; color: var(--text-1); font-size: 20px; }
 .tl__org   { margin: 0; color: var(--text-mute); font-size: 14px; }
 .tl__when  { margin: 4px 0; color: var(--text-mute); font-size: 13px; }

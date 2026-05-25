@@ -2,7 +2,10 @@
     <div class="footer">
         <div class="footer__items">
             <div class="footer__items_left">
-                <img src="@/assets/img/logo.png" alt="Logo">
+                <router-link to="/" class="nav__brand">
+                    <span class="nav__brand_first">Rustam</span>
+                    <span class="nav__brand_last">Isroilov</span>
+                </router-link>
             </div>
             <div class="footer__items_midle">
                 <p>+998 93 845 55 65</p>

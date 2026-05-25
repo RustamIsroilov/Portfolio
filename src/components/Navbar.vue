@@ -1,8 +1,9 @@
 <template>
     <nav class="nav">
         <div class="nav__logo">
-            <router-link to="/" @click="open = false">
-                <img class="nav__logo_img" src="@/assets/img/logo.png" alt="Logo">
+            <router-link to="/" class="nav__brand" @click="open = false">
+                <span class="nav__brand_first">Rustam</span>
+                <span class="nav__brand_last">Isroilov</span>
             </router-link>
         </div>
 

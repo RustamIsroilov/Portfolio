@@ -5,7 +5,7 @@
             <span>Proweb</span>
             Learning Center, and I level them up daily by vibe-coding with <span>Claude AI</span>.
         </h1>
-        <img src="@/assets/img/me.jpg" alt="Rustam Isroilov" class="about__img">
+        <img src="@/assets/img/me-portrait.jpg" alt="Rustam Isroilov" class="about__img">
     </div>
 
     <div class="stack">

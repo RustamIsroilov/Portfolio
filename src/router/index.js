@@ -8,7 +8,8 @@ import Achievements from '@/views/Achievements.vue'
 import Admin        from '@/views/Admin.vue'
 
 const routes = createRouter({
-    history: createWebHistory(),
+    // BASE_URL is "/Portfolio/" in production (set in vite.config.js) and "/" in dev
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         { path: '/',             name: 'HomePage',         component: Home },
         { path: '/about',        name: 'AboutPage',        component: About },

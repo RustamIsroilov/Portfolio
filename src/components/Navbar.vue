@@ -19,8 +19,9 @@
             <router-link to="/"        class="nav__items_desc" @click="open = false">Home</router-link>
             <router-link to="/about"   class="nav__items_desc" @click="open = false">About</router-link>
             <router-link to="/stack"   class="nav__items_desc" @click="open = false">Tech Stack</router-link>
-            <router-link to="/project" class="nav__items_desc" @click="open = false">Projects</router-link>
-            <router-link to="/contact" class="nav__items_desc" @click="open = false">Contact</router-link>
+            <router-link to="/project"      class="nav__items_desc" @click="open = false">Projects</router-link>
+            <router-link to="/achievements" class="nav__items_desc" @click="open = false">Achievements</router-link>
+            <router-link to="/contact"      class="nav__items_desc" @click="open = false">Contact</router-link>
         </div>
 
         <div class="nav__contacts">

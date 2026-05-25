@@ -17,6 +17,10 @@
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
+                            <img src="@/assets/img/link.png" alt="">
+                            <a href="https://t.me/safityprovider_bot" target="_blank" rel="noopener">Open in Telegram</a>
+                        </div>
+                        <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
                             <a href="https://github.com/RustamIsroilov/safitybot" target="_blank" rel="noopener">View Code</a>
                         </div>

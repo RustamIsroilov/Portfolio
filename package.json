@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "firebase": "^10.13.2",
     "sass": "^1.69.7",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"

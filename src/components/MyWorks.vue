@@ -16,6 +16,10 @@
                     </p>
                     <p class="card__desc_info">Tech stack : Python, python-telegram-bot, SQLite, VirusTotal API, Railway</p>
                     <div class="card__desc_links">
+                        <div class="card__desc_link">
+                            <img src="../assets/img/link.png" alt="">
+                            <a href="https://t.me/safityprovider_bot" target="_blank" rel="noopener">Open in Telegram</a>
+                        </div>
                         <div class="card__desc_git">
                             <img src="../assets/img/github.svg" alt="">
                             <a href="https://github.com/RustamIsroilov/safitybot" target="_blank" rel="noopener">View Code</a>

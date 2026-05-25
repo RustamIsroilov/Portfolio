@@ -62,7 +62,7 @@ const { data: achievements } = useAchievements();
     max-width: 1100px;
     margin: 80px auto 60px;
     padding: 0 20px;
-    color: #d9d9d9;
+    color: var(--text-1);
     font-family: Poppins, system-ui, sans-serif;
 }
 
@@ -71,32 +71,32 @@ const { data: achievements } = useAchievements();
     font-size: 52px;
     line-height: 1.1;
     margin: 0 0 10px;
-    background: linear-gradient(90deg, #13B0F5, #E70FAA);
+    background: var(--brand-grad-h);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     font-weight: 700;
 }
-.ach__sub { color: #a7a7a7; font-size: 20px; margin: 0; }
+.ach__sub { color: var(--text-mute); font-size: 20px; margin: 0; }
 
 .ach__card {
-    background: #2a2a2a;
+    background: var(--bg-1);
     border-radius: 18px;
     padding: 28px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
 }
 
 .ach__card_head { display: flex; justify-content: space-between; align-items: center; }
-.ach__card_desc { color: #a7a7a7; margin: 4px 0 18px; font-size: 16px; }
+.ach__card_desc { color: var(--text-mute); margin: 4px 0 18px; font-size: 16px; }
 
 .ach__big {
     font-size: 56px;
     line-height: 1;
     margin: 12px 0;
-    color: #fff;
+    color: var(--text-1);
     font-weight: 700;
 }
-.ach__big small { font-size: 22px; color: #888; font-weight: 400; }
+.ach__big small { font-size: 22px; color: var(--text-mute); font-weight: 400; }
 .ach__big--soft { font-size: 32px; }
 
 .ach__badge {
@@ -108,9 +108,9 @@ const { data: achievements } = useAchievements();
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.ach__badge--gold { background: #f7d774; color: #2a2200; }
-.ach__badge--blue { background: #74cef7; color: #002b3d; }
-.ach__badge--pink { background: #f774c6; color: #3d0029; }
+.ach__badge--gold { background: #fcd34d; color: #422006; }   /* amber, calmer */
+.ach__badge--blue { background: #7dd3fc; color: #0c4a6e; }   /* sky      */
+.ach__badge--pink { background: #f9a8d4; color: #500724; }   /* rose, muted */
 
 .ach__ielts { margin-bottom: 24px; }
 
@@ -121,20 +121,20 @@ const { data: achievements } = useAchievements();
     margin-top: 14px;
 }
 .ielts__item {
-    background: #1f1f1f;
+    background: var(--bg-0);
     border-radius: 12px;
     padding: 16px 8px;
     text-align: center;
 }
-.ielts__label { display: block; font-size: 13px; color: #a7a7a7; }
-.ielts__score { display: block; font-size: 28px; font-weight: 700; color: #fff; margin-top: 6px; }
+.ielts__label { display: block; font-size: 13px; color: var(--text-mute); }
+.ielts__score { display: block; font-size: 28px; font-weight: 700; color: var(--text-1); margin-top: 6px; }
 
 .ach__row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
 
 .ach__section {
     font-size: 32px;
     margin: 30px 0 20px;
-    color: #ccc;
+    color: var(--text-2);
     text-align: center;
 }
 
@@ -146,7 +146,7 @@ const { data: achievements } = useAchievements();
     top: 8px;
     bottom: 8px;
     width: 2px;
-    background: linear-gradient(180deg, #13B0F5, #E70FAA);
+    background: linear-gradient(180deg, var(--brand-from), var(--brand-to));
     border-radius: 2px;
 }
 .tl__item { position: relative; margin: 0 0 24px; }
@@ -157,14 +157,14 @@ const { data: achievements } = useAchievements();
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 0 0 4px #2a2a2a, 0 0 0 6px #13B0F5;
+    background: var(--text-1);
+    box-shadow: 0 0 0 4px var(--bg-1), 0 0 0 6px var(--brand-from);
 }
-.tl__body { background: #2a2a2a; border-radius: 12px; padding: 16px 20px; }
-.tl__title { margin: 0 0 4px; color: #fff; font-size: 20px; }
-.tl__org   { margin: 0; color: #a7a7a7; font-size: 14px; }
-.tl__when  { margin: 4px 0; color: #888; font-size: 13px; }
-.tl__desc  { margin: 8px 0 0; color: #d9d9d9; font-size: 15px; line-height: 1.5; }
+.tl__body { background: var(--bg-1); border-radius: 12px; padding: 16px 20px; }
+.tl__title { margin: 0 0 4px; color: var(--text-1); font-size: 20px; }
+.tl__org   { margin: 0; color: var(--text-mute); font-size: 14px; }
+.tl__when  { margin: 4px 0; color: var(--text-mute); font-size: 13px; }
+.tl__desc  { margin: 8px 0 0; color: var(--text-1); font-size: 15px; line-height: 1.5; }
 
 @media (max-width: 980px) {
     .ach__title { font-size: 38px; }

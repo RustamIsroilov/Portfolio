@@ -81,7 +81,7 @@ import Footer from '@/components/Footer.vue';
     text-align: center;
 }
 .aboutp__cta a {
-    background: linear-gradient(90deg, #13B0F5 -2.06%, #E70FAA 100%);
+    background: var(--brand-grad-h);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

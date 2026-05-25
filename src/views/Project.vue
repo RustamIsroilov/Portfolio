@@ -203,7 +203,7 @@ import Footer from '@/components/Footer.vue';
         align-items: center;
         gap: 10px;
         padding: 10px 20px;
-        background-color: #252323;
+        background-color: var(--bg-1);
         border-radius: 5px;
         transition: 0.4s;
 
@@ -213,7 +213,7 @@ import Footer from '@/components/Footer.vue';
         }
 
         & a {
-            background: var(--Gradient-Heading, linear-gradient(#13B0F5 -2.06%, #E70FAA 100%));
+            background: var(--brand-grad);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -225,14 +225,14 @@ import Footer from '@/components/Footer.vue';
     }
 
     &_btn:hover {
-        background: linear-gradient(90deg, rgb(50, 114, 87), rgb(81, 255, 217));
+        background: var(--bg-2);
         border-radius: 10px;
         cursor: pointer;
     }
 }
 
 .card__title {
-    background: var(--Gradient-Heading, linear-gradient(#13B0F5 -2.06%, #E70FAA 100%));
+    background: var(--brand-grad);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -245,7 +245,7 @@ import Footer from '@/components/Footer.vue';
 }
 
 .card__text {
-    color: var(--dark-content, #aaa);
+    color: var(--text-mute);
     text-align: center;
     font-family: Poppins;
     font-size: 22px;

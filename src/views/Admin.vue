@@ -191,56 +191,56 @@ function removeMilestone(i) {
     max-width: 760px;
     margin: 60px auto;
     padding: 0 20px;
-    color: #d9d9d9;
+    color: var(--text-1);
     font-family: Poppins, system-ui, sans-serif;
 }
-h1 { font-size: 32px; margin: 0 0 6px; color: #fff; }
-h2 { font-size: 22px; margin: 0 0 14px; color: #fff; }
+h1 { font-size: 32px; margin: 0 0 6px; color: var(--text-1); }
+h2 { font-size: 22px; margin: 0 0 14px; color: var(--text-1); }
 
-.admin__hint  { color: #a7a7a7; margin: 0 0 18px; font-size: 14px; }
+.admin__hint  { color: var(--text-mute); margin: 0 0 18px; font-size: 14px; }
 .admin__notice {
-    background: #2a2a2a; border-radius: 14px; padding: 28px;
-    border-left: 4px solid #f7d774;
+    background: var(--bg-1); border-radius: 14px; padding: 28px;
+    border-left: 4px solid var(--warn-fg);
 }
-.admin__notice code { background: #1a1a1a; padding: 2px 8px; border-radius: 4px; }
+.admin__notice code { background: var(--bg-0); padding: 2px 8px; border-radius: 4px; }
 
 .admin__login {
     display: flex; flex-direction: column; gap: 14px;
-    background: #2a2a2a; border-radius: 14px; padding: 28px;
+    background: var(--bg-1); border-radius: 14px; padding: 28px;
     max-width: 420px; margin: 0 auto;
 }
 .admin__login input,
 .admin__card  input,
 .admin__card  textarea {
-    background: #1a1a1a; color: #fff; border: 1px solid #3a3a3a;
+    background: var(--bg-input); color: var(--text-1); border: 1px solid var(--border);
     border-radius: 8px; padding: 10px 12px; font: inherit; width: 100%;
 }
 .admin__login input:focus,
 .admin__card  input:focus,
-.admin__card  textarea:focus { outline: 2px solid #13B0F5; }
+.admin__card  textarea:focus { outline: 2px solid var(--brand-from); }
 
 button {
-    background: linear-gradient(90deg, #13B0F5, #E70FAA);
+    background: var(--brand-grad-h);
     color: #fff; border: 0; border-radius: 8px;
     padding: 12px 18px; font-weight: 600; cursor: pointer;
     font: inherit; transition: opacity .2s;
 }
 button:disabled { opacity: .5; cursor: not-allowed; }
-button.ghost  { background: #3a3a3a; }
-button.danger { background: #b13a3a; }
+button.ghost  { background: var(--bg-2); }
+button.danger { background: var(--err-bg); color: var(--err-fg); }
 
-.admin__error  { color: #ff6b6b; margin: 0; font-size: 14px; }
+.admin__error  { color: var(--err-fg); margin: 0; font-size: 14px; }
 .admin__status {
     padding: 10px 14px; border-radius: 8px; margin: 0 0 18px;
     font-size: 14px;
 }
-.admin__status.ok  { background: #143d23; color: #97f3b3; }
-.admin__status.err { background: #3d1414; color: #ff9a9a; }
+.admin__status.ok  { background: var(--ok-bg);  color: var(--ok-fg); }
+.admin__status.err { background: var(--err-bg); color: var(--err-fg); }
 
 .admin__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
 
 .admin__card {
-    background: #2a2a2a; border-radius: 14px; padding: 22px;
+    background: var(--bg-1); border-radius: 14px; padding: 22px;
     margin-bottom: 18px; display: flex; flex-direction: column; gap: 12px;
 }
 .admin__cardhead { display: flex; justify-content: space-between; align-items: center; }
@@ -249,11 +249,11 @@ button.danger { background: #b13a3a; }
 }
 .admin__card label {
     display: flex; flex-direction: column; gap: 6px;
-    font-size: 13px; color: #a7a7a7;
+    font-size: 13px; color: var(--text-mute);
 }
 
 .admin__milestone {
-    background: #1f1f1f; border-radius: 10px; padding: 14px;
+    background: var(--bg-0); border-radius: 10px; padding: 14px;
     display: flex; flex-direction: column; gap: 8px;
 }
 

@@ -1,6 +1,6 @@
 {
-  "name": "first",
-  "version": "0.0.0",
+  "name": "portfolio",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "pinia": "^2.1.7",
     "sass": "^1.69.7",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"

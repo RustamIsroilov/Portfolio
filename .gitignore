@@ -8,8 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-.DS_Store
-# dist
+.DS_Store npm  run dev 
+dist
 dist-ssr
 coverage
 *.local

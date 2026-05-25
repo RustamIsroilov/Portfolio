@@ -1,195 +1,198 @@
 <template>
-    <div>
-
-    </div>
     <div class="works">
         <h2 class="card__title">Projects</h2>
-        <p class="works__desc">Things I’ve built so far</p>
+        <p class="works__desc">Things I've built so far</p>
         <div class="works__cards">
+            <!-- Featured: ScamGuard Bot -->
+            <div class="project__card">
+                <img src="@/assets/img/scamguard.svg" alt="ScamGuard" class="card__img">
+                <div class="card__desc">
+                    <div class="card__title">ScamGuard Bot</div>
+                    <div class="card__text">
+                        Telegram bot that flags suspicious accounts. It estimates each
+                        sender's account age, looks them up in a shared scammer database,
+                        cross-checks them against the CAS anti-spam list, and scans every
+                        URL and file in their messages with VirusTotal. Vibe-coded
+                        end-to-end with Claude AI, hosted 24/7 on Railway.
+                    </div>
+                    <div class="card__btns">
+                        <div class="card__btns_btn">
+                            <img src="@/assets/img/github.svg" alt="">
+                            <a href="https://github.com/RustamIsroilov/safitybot" target="_blank" rel="noopener">View Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="project__card">
                 <img src="@/assets/img/card_1.png" alt="" class="card__img">
                 <div class="card__desc">
                     <div class="card__title">Notes</div>
-                    <div class="card__text">Notes is my debut project in Vue.js ! This unique service provides an intuitive
-                        note-taking experience. Create, edit and organize them with ease, enjoying synchronization across
-                        all devices and multi-functionality for effective note management.
+                    <div class="card__text">Notes is my debut project in Vue.js. An intuitive note-taking experience
+                        — create, edit and organize notes with ease, sync across devices and manage them with
+                        multi-functional shortcuts.
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="">View Site</a>
+                            <a href="https://smirfayoz.github.io/todo-list/" target="_blank" rel="noopener">View Site</a>
                         </div>
                         <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
-                            <a href="">View Code</a>
+                            <a href="https://github.com/RustamIsroilov/Notes" target="_blank" rel="noopener">View Code</a>
                         </div>
-                        
-
                     </div>
-
                 </div>
             </div>
-            <div class="project__card">
 
+            <div class="project__card">
                 <div class="card__desc">
                     <div class="card__title">dBurger</div>
-                    <div class="card__text">Welcome to the world of taste with dBurger - my first JS project! Discover
-                        mouth-watering burgers, order online, and enjoy fast delivery. Unique design and user-friendly
-                        interface for your gastronomic pleasures.
+                    <div class="card__text">Welcome to the world of taste with dBurger — my first JS project.
+                        Discover mouth-watering burgers, order online, and enjoy a unique design and
+                        user-friendly interface.
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="https://rustamisroilov.github.io/dBurger/">View Site</a>
+                            <a href="https://rustamisroilov.github.io/dBurger/" target="_blank" rel="noopener">View Site</a>
                         </div>
                         <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
-                            <a href="https://github.com/RustamIsroilov/dBurger">View Code</a>
+                            <a href="https://github.com/RustamIsroilov/dBurger" target="_blank" rel="noopener">View Code</a>
                         </div>
                     </div>
                 </div>
                 <img src="@/assets/img/card_2.png" alt="" class="card__img">
             </div>
+
             <div class="project__card">
                 <img src="@/assets/img/card_6.png" alt="" class="card__img">
                 <div class="card__desc">
                     <div class="card__title">CinePhile</div>
-                    <div class="card__text">Welcome to a cinematic journey with CinePhile, my top Vue.js project! Explore
-                        a variety of movies, conveniently book tickets online, enjoy modern design and unique user
+                    <div class="card__text">A cinematic journey, my top Vue.js project. Explore a variety of
+                        movies, conveniently book tickets online, and enjoy a modern design and unique user
                         experience.
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="https://fakhad.github.io/movie-app">View Site</a>
-                        </div>
-                        <div class="card__btns_btn">
-                            <img src="@/assets/img/github.svg" alt="">
-                            <a href="">View Code</a>
+                            <a href="https://fakhad.github.io/movie-app" target="_blank" rel="noopener">View Site</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="project__card">
 
+            <div class="project__card">
                 <div class="card__desc">
                     <div class="card__title">Totembo</div>
-                    <div class="card__text">Welcome to the world of elegant temporary accessories with Totembo, my favorite
-                        HTML and CSS project! Explore a collection of stylish watches, conveniently choose and order online,
-                        enjoying an intuitive interface and impeccable service.
+                    <div class="card__text">My favorite HTML and CSS project — a collection of stylish watches.
+                        Conveniently choose and order online with an intuitive interface and impeccable service.
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="https://rustamisroilov.github.io/Totembo/">View Site</a>
+                            <a href="https://rustamisroilov.github.io/Totembo/" target="_blank" rel="noopener">View Site</a>
                         </div>
                         <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
-                            <a href="https://github.com/RustamIsroilov/Totembo">View Code</a>
+                            <a href="https://github.com/RustamIsroilov/Totembo" target="_blank" rel="noopener">View Code</a>
                         </div>
                     </div>
                 </div>
-                
                 <img src="@/assets/img/card_7.jpg" alt="" class="card__img">
             </div>
+
             <div class="project__card">
                 <img src="@/assets/img/card_4.png" alt="" class="card__img">
                 <div class="card__desc">
-                    <div class="card__title">Aprature</div>
-                    <div class="card__text">Welcome to my best website written in HTML and CSS Apprature - your virtual
-                        studio assistant! Order unique photographs created by professionals. Use the intuitive interface to
-                        easily place an order and enjoy a personalized approach to each photo.
+                    <div class="card__title">Apreture</div>
+                    <div class="card__text">My best website written in HTML and CSS — your virtual studio assistant.
+                        Order unique photographs created by professionals through an intuitive interface and enjoy a
+                        personalized approach to each photo.
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="https://rustamisroilov.github.io/document/">View Site</a>
+                            <a href="https://rustamisroilov.github.io/document/" target="_blank" rel="noopener">View Site</a>
                         </div>
                         <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
-                            <a href="https://github.com/RustamIsroilov/document">View Code</a>
+                            <a href="https://github.com/RustamIsroilov/document" target="_blank" rel="noopener">View Code</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="project__card">
 
+            <div class="project__card">
                 <div class="card__desc">
                     <div class="card__title">Vue Cinema</div>
                     <div class="card__text">
-                        Welcome to the website of my cinema - my most significant project in HTML and CSS! Here you can
-                        easily find information about films, schedules and purchase tickets online.   Thank you for choosing our virtual cinema!
+                        My most significant project in HTML and CSS. Find information about films, schedules
+                        and purchase tickets online. Thank you for choosing our virtual cinema!
                     </div>
                     <div class="card__btns">
                         <div class="card__btns_btn">
                             <img src="@/assets/img/link.png" alt="">
-                            <a href="https://rustamisroilov.github.io/VueCinema/">View Site</a>
+                            <a href="https://rustamisroilov.github.io/VueCinema/" target="_blank" rel="noopener">View Site</a>
                         </div>
                         <div class="card__btns_btn">
                             <img src="@/assets/img/github.svg" alt="">
-                            <a href="https://github.com/RustamIsroilov/VueCinema">View Code</a>
+                            <a href="https://github.com/RustamIsroilov/VueCinema" target="_blank" rel="noopener">View Code</a>
                         </div>
                     </div>
                 </div>
                 <img src="@/assets/img/card_3.png" alt="" class="card__img">
             </div>
-
         </div>
-
     </div>
     <Footer />
 </template>
 
 <script setup>
 import Footer from '@/components/Footer.vue';
-
-
 </script>
 
 <style lang="scss" scoped>
-.works{
-align-items: center;
-
-    &_cards{
-        display: flex;
-        justify-content: center;
-    }
+.works {
+    align-items: center;
+    padding: 0 20px;
 }
+
 .project__card {
     display: flex;
-    gap: 120px;
+    gap: 80px;
     justify-content: center;
     align-items: center;
     margin: 50px auto;
-
+    flex-wrap: wrap;
+    max-width: 1500px;
 }
 
 .card__img {
     border-radius: 10px;
     height: 400px;
     width: 700px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .card__desc {
-    max-width: 1400px;
+    max-width: 600px;
     width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
-    max-height: 400;
-    height: 100%;
     gap: 20px;
-
-
 }
 
 .card__btns {
     display: flex;
     align-items: center;
-    text-align: center;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
 
     &_btn {
         display: flex;
@@ -212,22 +215,15 @@ align-items: center;
             -webkit-text-fill-color: transparent;
             font-family: Poppins;
             font-size: 20px;
-            font-style: normal;
             font-weight: 300;
-
             letter-spacing: -1px;
-
         }
-
-
     }
 
     &_btn:hover {
         background: linear-gradient(90deg, rgb(50, 114, 87), rgb(81, 255, 217));
         border-radius: 10px;
         cursor: pointer;
-
-
     }
 }
 
@@ -238,7 +234,6 @@ align-items: center;
     -webkit-text-fill-color: transparent;
     font-family: Poppins;
     font-size: 58px;
-    font-style: normal;
     font-weight: 700;
     line-height: 70px;
     letter-spacing: -1px;
@@ -246,19 +241,32 @@ align-items: center;
 }
 
 .card__text {
-    color: var(--dark-content, #666);
+    color: var(--dark-content, #aaa);
     text-align: center;
     font-family: Poppins;
-    font-size: 32px;
-    font-style: normal;
+    font-size: 22px;
     font-weight: 400;
-    line-height: 35px;
-    /* 81.25% */
-    display: flex;
-    align-items: center;
-    width: 600px;
-    text-align: center;
+    line-height: 32px;
+    max-width: 600px;
+    width: 100%;
+}
 
+/* ────── Tablet ────── */
+@media (max-width: 1024px) {
+    .project__card { gap: 40px; margin: 30px auto; }
+    .card__img { height: 300px; width: 100%; max-width: 560px; }
+    .card__title { font-size: 42px; line-height: 52px; }
+    .card__text { font-size: 18px; line-height: 28px; }
+}
 
+/* ────── Mobile ────── */
+@media (max-width: 640px) {
+    .project__card { gap: 20px; margin: 20px auto; }
+    .card__img { height: auto; max-height: 220px; width: 100%; }
+    .card__title { font-size: 30px; line-height: 38px; }
+    .card__text { font-size: 16px; line-height: 24px; }
+    .card__btns { gap: 16px; }
+    .card__btns_btn a { font-size: 16px; }
+    .card__btns_btn img { height: 22px; width: 22px; }
 }
 </style>

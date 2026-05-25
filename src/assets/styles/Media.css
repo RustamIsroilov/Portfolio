@@ -1,0 +1,129 @@
+/* ──────────────────────────────────────────────────────────────
+   Responsive overrides. Style.css is the desktop layout; everything
+   here adapts it to smaller screens.
+   Breakpoints:
+     • ≤1280px  small desktops / large tablets
+     • ≤980px   tablets / landscape phones
+     • ≤640px   mobile portrait
+   ────────────────────────────────────────────────────────────── */
+
+img { max-width: 100%; }
+
+/* Mobile-nav burger (declared globally so it's always available) */
+.nav__burger {
+    display: none;
+    cursor: pointer;
+    padding: 6px;
+    background: transparent;
+    border: 0;
+}
+.nav__burger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #d9d9d9;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* ────────── ≤1280px ───────────────────────────────────────── */
+@media (max-width: 1280px) {
+    .nav             { gap: 40px; padding: 0 20px; }
+    .about           { gap: 60px; margin-top: 100px; padding: 0 20px; flex-wrap: wrap; }
+    .about__title    { font-size: 44px; line-height: 56px; width: auto; max-width: 100%; }
+    .about__title span { font-size: 44px; line-height: 56px; }
+    .works__cards    { width: auto; max-width: 100%; padding: 0 20px; }
+    .footer__items   { gap: 80px; padding: 0 20px; flex-wrap: wrap; justify-content: center; }
+    .footer__line    { width: 90%; }
+    .contact__title  { width: auto; max-width: 90%; padding: 100px 20px; font-size: 46px; line-height: 56px; }
+    .stack__items    { padding: 0 20px; }
+}
+
+/* ────────── ≤980px ────────────────────────────────────────── */
+@media (max-width: 980px) {
+    .nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    .nav__burger      { display: block; order: 2; }
+    .nav__contacts    { order: 3; }
+    .nav__items {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px 0;
+    }
+    .nav__items.is-open { display: flex; }
+    .nav__items_desc  { padding: 12px; font-size: 18px; }
+
+    .about            { flex-direction: column-reverse; text-align: center; align-items: center; gap: 30px; margin-top: 40px; }
+    .about__title,
+    .about__title span { font-size: 32px; line-height: 40px; }
+    .about__img       { width: 220px; height: 220px; }
+
+    .langs__items     { flex-wrap: wrap; gap: 30px; padding: 0 16px; }
+    .langs__title,
+    .works__title,
+    .stack__title     { font-size: 32px; line-height: 1.2; }
+    .langs__desc,
+    .works__desc,
+    .stack__desc      { font-size: 18px; line-height: 26px; padding: 0 16px; }
+    .langs__items_img { width: 140px; height: 170px; }
+    .langs__items_item{ gap: 24px; }
+
+    .stack__items_item{ width: calc(50% - 30px); }
+
+    .aboutp           { padding: 0 20px; }
+    .aboutp__desc     { width: auto; max-width: 100%; }
+    .aboutp__info_down{ max-width: 100%; flex-wrap: wrap; gap: 12px; }
+    .line             { width: 100%; }
+
+    .footer__items    { flex-direction: column; align-items: center; gap: 24px; }
+    .footer__items_midle { flex-direction: column; gap: 8px; text-align: center; }
+    .footer__nav      { flex-direction: column; gap: 16px; padding: 0 16px; text-align: center; }
+    .footer__nav_right{ flex-wrap: wrap; gap: 8px; justify-content: center; }
+
+    .contact__title   { font-size: 32px; line-height: 40px; padding: 60px 16px; }
+}
+
+/* ────────── ≤640px ────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .nav__logo_img    { width: 130px; height: 40px; }
+    .nav__contacts_img{ width: 28px; height: 28px; }
+
+    .about__title,
+    .about__title span { font-size: 24px; line-height: 32px; }
+    .about__img       { width: 170px; height: 170px; }
+
+    .langs__items_img { width: 80px; height: 96px; }
+    .langs__items     { gap: 20px; }
+    .langs__items_item{ gap: 16px; }
+    .langs__title,
+    .works__title,
+    .stack__title     { font-size: 26px; }
+    .langs__desc,
+    .works__desc,
+    .stack__desc      { font-size: 16px; }
+
+    .works__cards_card{ width: 92%; height: auto; padding-bottom: 24px; }
+    .card__img        { width: 100%; height: auto; }
+    .card__desc       { width: 90%; }
+
+    .stack__items_item{ width: 100%; }
+    .stack__items_img,
+    .stack__items_img1{ width: 80px; height: 96px; margin-top: 0; }
+    .stack__line,
+    .stack__line1     { width: 100px; }
+
+    .aboutp__title    { font-size: 28px; line-height: 36px; text-align: center; }
+    .aboutp__info_top { flex-direction: column; gap: 6px; align-items: flex-start; }
+
+    .contact__title   { font-size: 24px; line-height: 32px; padding: 50px 14px; }
+    .footer__items_right img { width: 38px; height: 38px; }
+}

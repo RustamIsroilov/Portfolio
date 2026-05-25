@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260" width="400" height="260">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0d2540"/>
+      <stop offset="100%" stop-color="#0088cc"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#cce8f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="260" fill="url(#bg)"/>
+  <g transform="translate(200,118)">
+    <path d="M0,-72 L62,-50 L62,8 C62,42 35,66 0,76 C-35,66 -62,42 -62,8 L-62,-50 Z"
+          fill="url(#shield)" stroke="#005580" stroke-width="3"/>
+    <path d="M-22,4 L-6,22 L26,-18" fill="none" stroke="#005580" stroke-width="8"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="200" y="230" text-anchor="middle"
+        font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">
+    ScamGuard Bot
+  </text>
+</svg>

@@ -8,19 +8,13 @@
                 </router-link>
             </div>
             <div class="footer__items_midle">
-                <p>+998 93 845 55 65</p>
-                <p>isroilovr10@gmail.com</p>
+                <p v-if="profile.phone">{{ profile.phone }}</p>
+                <p v-if="profile.email">{{ profile.email }}</p>
             </div>
             <div class="footer__items_right">
-                <a href="https://github.com/RustamIsroilov" target="_blank" rel="noopener">
-                    <img src="@/assets/img/github.svg" alt="GitHub">
-                </a>
-                <a href="https://twitter.com/RustambekI39739" target="_blank" rel="noopener">
-                    <img src="@/assets/img/twitter.svg" alt="Twitter">
-                </a>
-                <a href="https://www.instagram.com/rustambek7875/" target="_blank" rel="noopener">
-                    <img src="@/assets/img/insta.svg" alt="Instagram">
-                </a>
+                <a v-if="profile.github"    :href="profile.github"    target="_blank" rel="noopener"><img src="@/assets/img/github.svg"  alt="GitHub"></a>
+                <a v-if="profile.twitter"   :href="profile.twitter"   target="_blank" rel="noopener"><img src="@/assets/img/twitter.svg" alt="Twitter"></a>
+                <a v-if="profile.instagram" :href="profile.instagram" target="_blank" rel="noopener"><img src="@/assets/img/insta.svg"   alt="Instagram"></a>
             </div>
         </div>
 
@@ -28,20 +22,27 @@
 
         <div class="footer__nav">
             <div class="footer__nav_right">
-                <router-link to="/about"   class="footer__nav_right-item">About</router-link>
-                <router-link to="/stack"   class="footer__nav_right-item">Technologies</router-link>
-                <router-link to="/project" class="footer__nav_right-item">Projects</router-link>
-                <router-link to="/contact" class="footer__nav_right-item">Contact</router-link>
+                <router-link to="/about"        class="footer__nav_right-item">About</router-link>
+                <router-link to="/stack"        class="footer__nav_right-item">Technologies</router-link>
+                <router-link to="/project"      class="footer__nav_right-item">Projects</router-link>
+                <router-link to="/achievements" class="footer__nav_right-item">Achievements</router-link>
+                <router-link to="/contact"      class="footer__nav_right-item">Contact</router-link>
             </div>
             <div class="footer__nav_left">
                 <p class="footer__nav_left-item">
-                    Built by <span>Rustam Isroilov</span> with <span>Vue</span> &amp; <span>Claude AI</span>
+                    Built by <span>{{ profile.name }}</span> with <span>Vue</span> &amp; <span>Claude AI</span>
                 </p>
             </div>
         </div>
     </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { computed } from 'vue';
+import { useSiteContent } from '@/composables/useSiteContent';
+
+const { data: site } = useSiteContent();
+const profile = computed(() => site.value.profile);
+</script>
 
 <style lang="scss" scoped></style>

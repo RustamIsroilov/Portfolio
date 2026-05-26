@@ -5,7 +5,7 @@
 
         <div class="langs__grid">
             <div class="techtile" v-for="t in techs" :key="t.name">
-                <img :src="t.src" :alt="t.name" class="techtile__icon">
+                <img :src="iconUrl(t.icon)" :alt="t.name" class="techtile__icon">
                 <span class="techtile__name">{{ t.name }}</span>
             </div>
         </div>
@@ -13,29 +13,21 @@
 </template>
 
 <script setup>
-import html   from '@/assets/img/html.svg';
-import css    from '@/assets/img/css.svg';
-import js     from '@/assets/img/js.svg';
-import scss   from '@/assets/img/scss.svg';
-import vue    from '@/assets/img/vue.png';
-import vite   from '@/assets/img/vite.svg';
-import git    from '@/assets/img/git.svg';
-import github from '@/assets/img/github.svg';
-import vs     from '@/assets/img/vs.svg';
-import claude from '@/assets/img/claude.svg';
+import { computed } from 'vue';
+import { useSiteContent } from '@/composables/useSiteContent';
 
-const techs = [
-    { name: 'HTML',      src: html },
-    { name: 'CSS',       src: css },
-    { name: 'JavaScript',src: js },
-    { name: 'SCSS',      src: scss },
-    { name: 'Vue',       src: vue },
-    { name: 'Vite',      src: vite },
-    { name: 'Git',       src: git },
-    { name: 'GitHub',    src: github },
-    { name: 'VS Code',   src: vs },
-    { name: 'Claude AI', src: claude },
-];
+const { data: site } = useSiteContent();
+const techs = computed(() => site.value.homeTech || []);
+
+// Resolve "html.svg" → bundled URL via Vite glob. Filenames must live in
+// src/assets/img/. External https:// URLs pass through unchanged.
+const iconMap = import.meta.glob('@/assets/img/*', { eager: true, query: '?url', import: 'default' });
+function iconUrl(name) {
+    if (!name) return '';
+    if (name.startsWith('http')) return name;
+    const key = Object.keys(iconMap).find(k => k.endsWith('/' + name));
+    return key ? iconMap[key] : '';
+}
 </script>
 
 <style lang="scss" scoped>
@@ -44,8 +36,6 @@ const techs = [
     margin: 80px auto 0;
     padding: 0 24px;
 }
-
-/* Title + sub already styled in Style.css — just tighten spacing */
 .langs__title { margin: 0 0 6px; }
 .langs__desc  { margin: 0 0 32px; }
 
@@ -54,50 +44,22 @@ const techs = [
     grid-template-columns: repeat(5, 1fr);
     gap: 18px;
 }
-
 .techtile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 22px 14px;
-    background: var(--bg-1);
-    border: 1px solid var(--border);
-    border-radius: 14px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; padding: 22px 14px;
+    background: var(--bg-1); border: 1px solid var(--border); border-radius: 14px;
     transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-    aspect-ratio: 1 / 1;          // keeps each tile square
+    aspect-ratio: 1 / 1;
 }
+.techtile:hover { transform: translateY(-3px); border-color: var(--brand-from); background: var(--bg-2); }
+.techtile__icon { width: 56px; height: 56px; object-fit: contain; }
+.techtile__name { color: var(--text-2); font-family: Poppins, system-ui, sans-serif; font-size: 14px; font-weight: 500; text-align: center; line-height: 1.2; }
 
-.techtile:hover {
-    transform: translateY(-3px);
-    border-color: var(--brand-from);
-    background: var(--bg-2);
-}
-
-.techtile__icon {
-    width: 56px;
-    height: 56px;
-    object-fit: contain;
-}
-
-.techtile__name {
-    color: var(--text-2);
-    font-family: Poppins, system-ui, sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.2;
-}
-
-/* ── Tablet ── */
 @media (max-width: 980px) {
     .langs       { margin-top: 60px; }
     .langs__grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
     .techtile__icon { width: 44px; height: 44px; }
 }
-
-/* ── Mobile ── */
 @media (max-width: 640px) {
     .langs__grid     { grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .techtile        { padding: 16px 8px; gap: 8px; }
